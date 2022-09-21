@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+
+		<title>Gesture Recognition System</title>
+
+		<!-- CSS FILES -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,300;0,400;0,600;1,300&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+		<link href="{% static 'css/bootstrap-icons.css' %}" rel="stylesheet" />
+
+		<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet" />
+
+		<link href="{% static 'css/tooplate-tween-agency.css' %}" rel="stylesheet" />
+
+		<style>
+.popup .popuptext {
+visibility: hidden;
+background-color: #555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 8px 0;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -80px;
+}
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+from {opacity: 0;}
+to {opacity: 1;}
+}
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+</style>
+
+	</head>
+	<!-- surface-71_s6RDJpGc-unsplash -->
+	<body>
+		<nav class="navbar fixed-top navbar-expand-lg">
+			<div class="container">
+				<a href="index.html" class="navbar-brand">
+					 Gesture Recognition System
+				</a>
+
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-lg-5">
+						<li class="nav-item">
+							<a class="nav-link" href="#section_1">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#section_2">Introduction
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#section_3">Demo
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="#section_4">Selected Operations</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<main>
+			<section
+				class="hero d-flex justify-content-center align-items-center"
+				id="section_1"
+			>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-12">
+							<div class="heroText">
+								<h1 class="text-white mb-lg-5 mb-4">
+									We are ready to bring change in Gesture Recognition
+								</h1>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="overlay"></div>
+			</section>
+
+			<section class="about section-padding" id="section_2">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 col-12">
+							<h2 class="mb-5">Introduction</h2>
+						</div>
+
+						<div class="col-12">
+							<div class="tab-content" id="nav-tabContent">
+								<div
+									class="tab-pane fade show active"
+									id="nav-intro"
+									role="tabpanel"
+									aria-labelledby="nav-intro-tab"
+								>
+									<div class="row">
+										<div class="col-lg-6 col-12 mb-lg-0 mt-4 mb-4">
+											<img
+												src="{% static 'images/webpage-browser-digital-icon-symbols-concept.jpg' %}"
+												class="img-fluid"
+												alt=""
+											/>
+										</div>
+
+										<div class="col-lg-5 col-12 m-auto">
+											<h3 class="mb-3">Operation Performed using Gestures</h3>
+
+											<p>
+												Communication is one of the most important things when
+												it comes to living in a society. Not being able to
+												communicate due to disability in speaking and hearing
+												brings different kinds of challenges to this society.
+											</p>
+
+											<p>
+												This project mainly focuses on removing the barrier of
+												communication between the mute community and the people
+												not familiar with concept of sign language.
+											</p>
+
+											<p>
+												The purpose of this project is to build a real-time hand
+												gesture recognition system using concepts of Deep
+												Learning and Computer Vision which recognizes gestures
+												and performs operations provided.
+											</p>
+										</div>
+									</div>
+								</div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="my-5" id="section_3" >
+				<div class="">
+					<div class="">
+						<h3 class="text-center">Demos for Selected Operations</h3>
+					</div>
+					<div class="container ">
+						<div class="row text-center" >
+
+								<div class="col-sm">
+									<video width="400" height="300" controls>
+<!--										<source src="VirtualMouse.mp4" type="video/mp4">-->
+										<source src="{% static 'Video/VirtualMouse.mp4' %}" type="video/mp4">
+
+									</video>
+									<p class="text-center"><mark>Virtual Mouse</mark></p>
+								</div>
+
+								<div class="col-sm">
+									<video width="400" height="300" controls>
+										<source src="{% static 'Video/VolumeControl.mp4' %}" type="video/mp4">
+									</video>
+									<p class="text-center"><mark>Volume Control</mark></p>
+								</div>
+
+								<div class="col-sm">
+									<video width="400" height="300" controls>
+										<source src="{% static 'Video/VirtualDragDrop.mp4' %}" type="video/mp4">
+									</video>
+									<p class="text-center"><mark>Virtual Drag and Drop</mark></p>
+								</div>
+
+
+						</div>
+						<div class="row text-center">
+
+								<div class="col-sm">
+									<video width="400" height="300" controls>
+										<source src="{% static 'Video/VirtualKeyboard.mp4' %}" type="video/mp4">
+									</video>
+									<p class="text-center"><mark>Virtual Keyboard</mark></p>
+								</div>
+
+
+								<div class="col-sm">
+									<video width="400" height="300" controls>
+										<source src="{% static 'Video/VirtualZoom.mp4' %}" type="video/mp4">
+									</video>
+									<p class="text-center"><mark>Virtual Zoom in and Out</mark></p>
+								</div>
+
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<section class="work pt-2 mb-5" id="section_4">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="mb-5 text-center">Selected Operations</h2>
+						</div>
+
+						<div class="col-lg-4 col-12">
+							<div class="work-thumb mb-4">
+								<a href="virtualmouse/">
+								<div class="work-image-wrap">
+										<img
+											src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_600,h_400/https://us.aving.net/wp-content/uploads/2014/09/20140903-0147341470.jpg"
+											class="img-fluid work-image w-100"
+											alt=""
+										/>
+
+								</div>
+								</a>
+
+								<div class="work-text-info">
+
+									<h4 class="work-title">Virtual Mouse</h4>
+								</div>
+							</div>
+
+							<div class="work-thumb mb-4">
+								<a href="virtualkeyboard/">
+								<div class="work-image-wrap">
+										<img
+											src="{% static 'images/virtual_keyboard.jpeg' %}"
+											class="img-fluid work-image"
+											alt=""
+										/>
+								</div>
+								</a>
+
+								<div class="work-text-info">
+									<h4 class="work-title">Virtual Keyboard</h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-12">
+							<div class="work-thumb mb-4">
+								<a href="virtualvolume/">
+								<div class="work-image-wrap">
+										<img
+											src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYtxvPpzL8IDpCwUSgh_EY3NzbIvlf4nYwmQ&usqp=CAU"
+											class="img-fluid work-image w-100 h-75"
+											alt=""
+										/>
+								</div>
+								</a>
+
+								<div class="work-text-info">
+									<h4 class="work-title">Virtual Volume Control</h4>
+								</div>
+							</div>
+
+							<div class="work-thumb mb-4">
+								<a href="virtualzoomin/">
+								<div class="work-image-wrap">
+										<img
+											src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPDLG7fCXtJ5e4TULXda8IFT4QEt4rLxaApQ&usqp=CAU"
+											class="img-fluid work-image w-100 h-100"
+											alt=""
+										/>
+								</div>
+								</a>
+
+								<div class="work-text-info">
+
+									<h4 class="work-title">Virtual Zoom-In-Out</h4>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-lg-4 col-12">
+							<div class="work-thumb mb-4">
+								<a href="virtualdragdrop/">
+								<div class="work-image-wrap">
+										<img
+											src="data:image/jpeg;base64,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"
+											class="img-fluid work-image w-100 h-50"
+											alt=""
+										/>
+								</div>
+								</a>
+
+								<div class="work-text-info">
+									<h4 class="work-title">Virtual Drag-Drop</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-12 me-auto mb-4">
+						<h3 class="text-white mb-3">Gesture Recognition System</h3>
+						<h6 class="text-white mb-5">We are ready to bring change in Gesture Recognition.</h6>
+					</div>
+
+					<div class="col-lg-2 col-12 mx-auto my-lg-0 my-4">
+						<h5 class="text-white mb-3">Operations</h5>
+
+						<ul class="footer-menu">
+							<li class="footer-menu-item">
+								<p class="text-white">AI Virtual Mouse</p>
+							</li>
+
+							<li class="footer-menu-item">
+								<p class="text-white">AI Virtual Volume Control</p>
+							</li>
+
+							<li class="footer-menu-item">
+								<p class="text-white">AI Virtual Drag-Drop</p>
+							</li>
+
+							<li class="footer-menu-item">
+								<p class="text-white">AI Virtual Keyboard</p>
+                            </li>
+
+                            <li class="footer-menu-item">
+								<p class="text-white">AI Virtual Zoom-In-Out</p>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-lg-2 col-12">
+						<h5 class="text-white mb-3">Our Team</h5>
+
+						<p><a href="https://www.linkedin.com/in/pratik-kumar-5240a81a6" target="_blank" class="text-white mb-1">Pratik Kumar</a></p>
+						<p><a href="https://www.linkedin.com/in/krishnakumar-chavan-5800a21b2/" target="_blank" class="text-white mb-1">Krishnakumar Chavan</a></p>
+						<p><a href="https://www.linkedin.com/in/shweta-hiremath-5b8371196/" target="_blank" class="text-white mb-1">Shweta Hiremath</a></p>
+                        <p><a href="https://www.linkedin.com/in/moksha-bafna-9063571ba/" target="_blank" class="text-white mb-1">Moksha Bafna</a></p>
+
+
+
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+		<!-- JAVASCRIPT FILES -->
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/popper.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.backstretch.min.js' %}"></script>
+		<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+		<script src="{% static 'js/magnific-popup-options.js' %}"></script>
+		<script src="{% static 'js/click-scroll.js' %}"></script>
+
+
+	<script>
+	window.onload = playVideo();
+function myFunction() {
+ var elem = document.getElementById("test")
+    elem.play();
+
+}
+</script>
+{%include 'custom.html'%}
+</html>
